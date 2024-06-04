@@ -93,6 +93,7 @@ export class ReservationsService {
     return this.appointmentsRepository
       .getAppointments({ providerId, startTime, endTime })
       .filter((appointment) => this.isAppointmentAvailable(appointment))
+      .map((appointment) => ({ ...appointment, clientId: null, reservedAt: null }))
   }
 
   isAppointmentAvailable(appointment) {
