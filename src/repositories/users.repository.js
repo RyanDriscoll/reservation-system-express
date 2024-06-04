@@ -1,5 +1,4 @@
-export const PROVIDER_USER_TYPE = 'provider'
-export const CLIENT_USER_TYPE = 'client'
+import { CLIENT_USER_TYPE, PROVIDER_USER_TYPE } from '../constants/index.js'
 
 export class UsersRepository {
   users = [
